@@ -39,4 +39,14 @@ public class TestRagistration {
         boolean MobileNumber=obj.checkMobileNumber("91 1234567890");
         Assert.assertTrue(MobileNumber);
     }
+    @Test
+    public void givenPassword_whenValid_thenTrue() {
+        boolean Password=obj.checkPassword("asdfgghh");
+        Assert.assertTrue(Password);
+    }
+    @Test
+    public void givenPassword_whenInvalid_thenFalse() {
+        boolean Password=obj.checkPassword("asdgh");
+        Assert.assertFalse(Password);
+    }
 }
