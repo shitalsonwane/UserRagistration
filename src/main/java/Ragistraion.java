@@ -7,6 +7,7 @@ public class Ragistraion {
     String pattern4="[a-zA-Z0-9]{8,}$";
     String pattern5="^([a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*)+$";
     String pattern6="^([A-Z0-9]*[A-Z]+[a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*)|([a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*)$";
+    String pattern7="^([a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*[0-9]*[a-zA-Z0-9]*[@#$&]*[a-zA-Z0-9]*)|([a-zA-Z0-9]*[@#$&]*[a-zA-Z0-9]*[A-Z]*[a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*)|([a-zA-Z0-9]*[0-9]*[a-zA-Z0-9]*[@#$&]+[a-zA-Z0-9]*[A-Z]*[a-zA-Z0-9]*)$";
     public static void main(String args[])
     {
         System.out.println("---Welcome to User Ragistration---");
@@ -38,5 +39,12 @@ public class Ragistraion {
             return false;
         }
     }
-
+    public boolean checkPassword4(String pass) {
+        if(pass.length()>=8) {
+            return (Pattern.matches(pattern7,pass));
+        }
+        else {
+            return false;
+        }
+    }
 }
