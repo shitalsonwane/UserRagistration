@@ -40,23 +40,33 @@ public class TestRagistration {
         Assert.assertTrue(MobileNumber);
     }
     @Test
-    public void givenPassword_whenValid_thenTrue() {
-        boolean Password=obj.checkPassword1("asdfgghh");
-        Assert.assertTrue(Password);
-    }
-    @Test
-    public void givenPassword_whenInvalid_thenFalse() {
-        boolean Password=obj.checkPassword1("asdgh");
-        Assert.assertFalse(Password);
-    }
-    @Test
-    public void givenPassword1_whenvalid_thenTrue() {
-        boolean Password2=obj.checkPassword2("19RevatiTT");
-        Assert.assertTrue(Password2);
+    public void givenPassword1_whenValid_thenTrue() {
+        boolean Password1=obj.checkPassword1("asdfgghh");
+        Assert.assertTrue(Password1);
     }
     @Test
     public void givenPassword1_whenInvalid_thenFalse() {
-        boolean Password2=obj.checkPassword2("adjadfgh");
+        boolean Password1=obj.checkPassword1("asdgh");
+        Assert.assertFalse(Password1);
+    }
+    @Test
+    public void givenPassword2_whenvalid_thenTrue() {
+        boolean Password2=obj.checkPassword3("19RevatiTT");
+        Assert.assertTrue(Password2);
+    }
+    @Test
+    public void givenPassword2_whenInvalid_thenFalse() {
+        boolean Password2=obj.checkPassword3("adjadfgh");
         Assert.assertFalse(Password2);
+    }
+    @Test
+    public void givenPassword3_whenvalid_thenTrue() {
+        boolean Password3=obj.checkPassword3("19RevatiTT");
+        Assert.assertTrue(Password3);
+    }
+    @Test
+    public void givenPassword3_whenInvalid_thenFalse() {
+        boolean Password3=obj.checkPassword3("adjadfgh");
+        Assert.assertFalse(Password3);
     }
 }
