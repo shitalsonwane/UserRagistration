@@ -24,4 +24,14 @@ public class TestRagistration {
         boolean lastname=obj.checkName("capital");
         Assert.assertFalse(lastname);
     }
+    @Test
+    public void givenEmail_whenValid_thenTrue() {
+        boolean Email=obj.checkEmail("abc-100@yahoo.com");
+        Assert.assertTrue(Email);
+    }
+    @Test
+    public void givenEmail_wheninValid_thenFalse() {
+        boolean Email=obj.checkEmail("abc-100yahoo.com");
+        Assert.assertFalse(Email);
+    }
 }
