@@ -25,11 +25,18 @@ public class Ragistraion {
     }
 
     public boolean checkPassword2(String pass) {
-        if(pass.length()>=8) {
-            return (Pattern.matches(pattern6, pass));
-        }
-        else {
+        if (pass.length() >= 8) {
+            return (Pattern.matches(pattern5, pass));
+        } else {
             return false;
         }
     }
+    public boolean checkPassword3(String pass) {
+        if (pass.length() >= 8) {
+            return (Pattern.matches(pattern6, pass));
+        } else {
+            return false;
+        }
+    }
+
 }
