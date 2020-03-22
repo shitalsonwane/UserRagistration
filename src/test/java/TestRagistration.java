@@ -51,12 +51,12 @@ public class TestRagistration {
     }
     @Test
     public void givenPassword1_whenvalid_thenTrue() {
-        boolean Password1=obj.checkPassword2("adjadfTGFgh");
-        Assert.assertTrue(Password1);
+        boolean Password2=obj.checkPassword2("19RevatiTT");
+        Assert.assertTrue(Password2);
     }
     @Test
     public void givenPassword1_whenInvalid_thenFalse() {
-        boolean Password1=obj.checkPassword2("adjadfgh");
-        Assert.assertFalse(Password1);
+        boolean Password2=obj.checkPassword2("adjadfgh");
+        Assert.assertFalse(Password2);
     }
 }
