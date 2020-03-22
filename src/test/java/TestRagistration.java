@@ -34,4 +34,9 @@ public class TestRagistration {
         boolean Email=obj.checkEmail("abc-100yahoo.com");
         Assert.assertFalse(Email);
     }
+    @Test
+    public void givenMobileNumber_whenValid_thenTrue() {
+        boolean MobileNumber=obj.checkMobileNumber("91 1234567890");
+        Assert.assertTrue(MobileNumber);
+    }
 }
